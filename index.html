@@ -1,0 +1,74 @@
+<!DOCTYPE html> <html><head>
+        <title> Cari's Buzzfeed project</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #17d3ff;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>What is your favorite color?</h1>
+        </div>
+        <div class="questions">
+            <h4> How many siblings do you have?
+
+</h4>
+            <img alt="image of proud family" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwJMGt_nZVGzWUKOFEQBHLk6_-Pi01i-KNZw&amp;usqp=CAU">
+            <input placeholder="Put a whole number here" class="sibs">
+            <h4>Do you like McDonalds or Cane's?
+</h4>
+            
+            
+            <img alt=" image of youtubers trying cane's and Mcdonald's" src="https://i.ytimg.com/vi/Eu-I_Dy8BM4/maxresdefault.jpg">
+            
+            
+           
+            
+            
+            <input placeholder=" Type your answer here" class="resturant">
+        </div>
+        <br>
+         <button> Click to see your answer!</button>
+            
+        <div class="result">
+            
+            this is where the user will see their quiz result!
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var sibs = document.querySelector(".sibs");
+var food = document.querySelector(".resturant"); //button
+
+var button = document.querySelector("button"); //other pieces of body
+
+var result = document.querySelector(".result");
+var body = document.querySelector("body");
+
+button.onclick = function () {
+  var usersibs = sibs.value;
+  var userfood = food.value;
+
+  if (usersibs <= 10 && userfood === "Mcdonald's") {
+    result.innerHTML = "You have " + usersibs + " siblings and you love " + userfood + ". Your favorite color is lavender ";
+    body.style.background = "lavender";
+  } else if (usersibs <= 10 && userfood === "Cane's") {
+    result.innerHTML = "You have " + usersibs + " siblings and you love " + userfood + ". Your favorite color is pink";
+    body.style.background = "pink";
+  } else if (usersibs >= 10 && userfood === "Mcdonald's") {
+    result.innerHTML = "You have " + usersibs + " siblings and you love " + userfood + ". Your favorite color is yellow";
+    body.style.background = "yellow";
+  } else if (usersibs >= 10 && userfood === "Cane's") {
+    result.innerHTML = "You have " + usersibs + " siblings and you love " + userfood + ". Your favorite color is purple";
+    body.style.background = "purple";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbInNpYnMiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJmb29kIiwiYnV0dG9uIiwicmVzdWx0IiwiYm9keSIsIm9uY2xpY2siLCJ1c2Vyc2licyIsInZhbHVlIiwidXNlcmZvb2QiLCJpbm5lckhUTUwiLCJzdHlsZSIsImJhY2tncm91bmQiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLElBQUksR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLE9BQXZCLENBQVg7QUFDQSxJQUFJQyxJQUFJLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixDQUFYLEMsQ0FDQTs7QUFDQSxJQUFJRSxNQUFNLEdBQUdILFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFiLEMsQ0FDQTs7QUFDQSxJQUFJRyxNQUFNLEdBQUdKLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFiO0FBQ0EsSUFBSUksSUFBSSxHQUFHTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsTUFBdkIsQ0FBWDs7QUFFQUUsTUFBTSxDQUFDRyxPQUFQLEdBQWdCLFlBQVU7QUFDdEIsTUFBSUMsUUFBUSxHQUFDUixJQUFJLENBQUNTLEtBQWxCO0FBQ0EsTUFBSUMsUUFBUSxHQUFDUCxJQUFJLENBQUNNLEtBQWxCOztBQUNBLE1BQUdELFFBQVEsSUFBSSxFQUFaLElBQWtCRSxRQUFRLEtBQUcsWUFBaEMsRUFBNkM7QUFDNUNMLElBQUFBLE1BQU0sQ0FBQ00sU0FBUCxHQUFpQixjQUFhSCxRQUFiLEdBQXNCLHlCQUF0QixHQUFpREUsUUFBakQsR0FBMkQsb0NBQTVFO0FBQ0dKLElBQUFBLElBQUksQ0FBQ00sS0FBTCxDQUFXQyxVQUFYLEdBQXNCLFVBQXRCO0FBQ0gsR0FIRCxNQUdPLElBQUdMLFFBQVEsSUFBSSxFQUFaLElBQWtCRSxRQUFRLEtBQUcsUUFBaEMsRUFBeUM7QUFDL0NMLElBQUFBLE1BQU0sQ0FBQ00sU0FBUCxHQUFpQixjQUFhSCxRQUFiLEdBQXNCLHlCQUF0QixHQUFpREUsUUFBakQsR0FBMkQsK0JBQTVFO0FBQ0dKLElBQUFBLElBQUksQ0FBQ00sS0FBTCxDQUFXQyxVQUFYLEdBQXNCLE1BQXRCO0FBQ0gsR0FITSxNQUdDLElBQUdMLFFBQVEsSUFBSSxFQUFaLElBQWtCRSxRQUFRLEtBQUcsWUFBaEMsRUFBNkM7QUFDcERMLElBQUFBLE1BQU0sQ0FBQ00sU0FBUCxHQUFpQixjQUFhSCxRQUFiLEdBQXNCLHlCQUF0QixHQUFpREUsUUFBakQsR0FBMkQsaUNBQTVFO0FBQ0dKLElBQUFBLElBQUksQ0FBQ00sS0FBTCxDQUFXQyxVQUFYLEdBQXNCLFFBQXRCO0FBQ0gsR0FITyxNQUdELElBQUdMLFFBQVEsSUFBSSxFQUFaLElBQWtCRSxRQUFRLEtBQUcsUUFBaEMsRUFBeUM7QUFDL0NMLElBQUFBLE1BQU0sQ0FBQ00sU0FBUCxHQUFpQixjQUFhSCxRQUFiLEdBQXNCLHlCQUF0QixHQUFpREUsUUFBakQsR0FBMkQsaUNBQTVFO0FBQ0dKLElBQUFBLElBQUksQ0FBQ00sS0FBTCxDQUFXQyxVQUFYLEdBQXNCLFFBQXRCO0FBQ0g7QUFDSixDQWhCRCIsInNvdXJjZXNDb250ZW50IjpbImxldCBzaWJzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zaWJzXCIpO1xubGV0IGZvb2QgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3R1cmFudFwiKTtcbi8vYnV0dG9uXG5sZXQgYnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJ1dHRvblwiKTtcbi8vb3RoZXIgcGllY2VzIG9mIGJvZHlcbmxldCByZXN1bHQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcbmxldCBib2R5ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJvZHlcIik7XG5cbmJ1dHRvbi5vbmNsaWNrPShmdW5jdGlvbigpe1xuICAgIGxldCB1c2Vyc2licz1zaWJzLnZhbHVlO1xuICAgIGxldCB1c2VyZm9vZD1mb29kLnZhbHVlO1xuICAgIGlmKHVzZXJzaWJzIDw9IDEwICYmIHVzZXJmb29kPT09XCJNY2RvbmFsZCdzXCIpe1xuICAgICByZXN1bHQuaW5uZXJIVE1MPVwiWW91IGhhdmUgXCIgK3VzZXJzaWJzK1wiIHNpYmxpbmdzIGFuZCB5b3UgbG92ZSBcIiArdXNlcmZvb2QrIFwiLiBZb3VyIGZhdm9yaXRlIGNvbG9yIGlzIGxhdmVuZGVyIFwiO1xuICAgICAgICBib2R5LnN0eWxlLmJhY2tncm91bmQ9XCJsYXZlbmRlclwiO1xuICAgIH0gZWxzZSBpZih1c2Vyc2licyA8PSAxMCAmJiB1c2VyZm9vZD09PVwiQ2FuZSdzXCIpe1xuICAgICByZXN1bHQuaW5uZXJIVE1MPVwiWW91IGhhdmUgXCIgK3VzZXJzaWJzK1wiIHNpYmxpbmdzIGFuZCB5b3UgbG92ZSBcIiArdXNlcmZvb2QrIFwiLiBZb3VyIGZhdm9yaXRlIGNvbG9yIGlzIHBpbmtcIjtcbiAgICAgICAgYm9keS5zdHlsZS5iYWNrZ3JvdW5kPVwicGlua1wiO1xuICAgIH0gIGVsc2UgaWYodXNlcnNpYnMgPj0gMTAgJiYgdXNlcmZvb2Q9PT1cIk1jZG9uYWxkJ3NcIil7XG4gICAgIHJlc3VsdC5pbm5lckhUTUw9XCJZb3UgaGF2ZSBcIiArdXNlcnNpYnMrXCIgc2libGluZ3MgYW5kIHlvdSBsb3ZlIFwiICt1c2VyZm9vZCsgXCIuIFlvdXIgZmF2b3JpdGUgY29sb3IgaXMgeWVsbG93XCI7XG4gICAgICAgIGJvZHkuc3R5bGUuYmFja2dyb3VuZD1cInllbGxvd1wiO1xuICAgIH0gZWxzZSBpZih1c2Vyc2licyA+PSAxMCAmJiB1c2VyZm9vZD09PVwiQ2FuZSdzXCIpe1xuICAgICByZXN1bHQuaW5uZXJIVE1MPVwiWW91IGhhdmUgXCIgK3VzZXJzaWJzK1wiIHNpYmxpbmdzIGFuZCB5b3UgbG92ZSBcIiArdXNlcmZvb2QrIFwiLiBZb3VyIGZhdm9yaXRlIGNvbG9yIGlzIHB1cnBsZVwiO1xuICAgICAgICBib2R5LnN0eWxlLmJhY2tncm91bmQ9XCJwdXJwbGVcIjtcbiAgICB9XG59KTsiXX0=</script></body></html>
